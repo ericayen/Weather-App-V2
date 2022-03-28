@@ -1,0 +1,20 @@
+body {
+  padding: 20px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f3bc26;
+}
+
+.card {
+  margin: 0 auto;
+  border-color: rgb(33, 82, 189, 0.6);
+  width: 50%;
+  min-width: 50ch;
+  height: 50%;
+}
