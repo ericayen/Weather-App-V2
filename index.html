@@ -22,6 +22,37 @@
         <div class="container">
       <div class="card">
         <div class="card-body">
+             <div class="input-group mb-3" id="city-search">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter city name"
+              aria-label="Enter city name"
+              aria-describedby="basic-addon2"
+              id="search-bar"
+              autofocus="on"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="search-button"
+              >
+                Search
+              </button>
+            </div>
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="location-button"
+              >
+                Location
+                <i class="fa-solid fa-location-arrow" id="location-arrow"></i>
+              </button>
+            </div>
+          </div>
+          <br />
              <h1 id="city"></h1>
           <div class="search-date"></div>
           <img src="" class="weather-emoji"></img>
