@@ -97,7 +97,16 @@ function showFahrenheit(event) {
   temperature.innerHTML = Math.round(fahrenheitTemp);
 }
 
+function showCelcius(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#deg-temp");
+  temperature.innerHTML = Math.round(celciusTemp);
+}
+
 let celciusTemp = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCelcius);
