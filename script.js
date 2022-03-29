@@ -42,6 +42,7 @@ function showTemperature(response) {
   let wind = document.querySelector("#speed");
   let weather = document.querySelector(".weather-description");
   let icon = document.querySelector(".weather-emoji");
+  celciusTemp = response.data.main.temp;
   currentTemp.innerHTML = `${temperature}`;
   highTemp.innerHTML = `${high}°`;
   lowTemp.innerHTML = `${low}°`;
@@ -88,3 +89,15 @@ cityInput.addEventListener("keyup", function (event) {
 
 let searchLocation = document.querySelector("#search-button");
 searchLocation.addEventListener("click", citySearch);
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#deg-temp");
+  let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let celciusTemp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
