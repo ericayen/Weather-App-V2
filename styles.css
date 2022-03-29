@@ -32,6 +32,15 @@ a:hover {
   padding: 10px;
 }
 
+.current-temp .active {
+  color: #212521;
+  cursor: default;
+}
+
+.current-temp .active:hover {
+  text-decoration: none;
+}
+
 #deg-temp {
   font-weight: 400;
   font-size: 42px;

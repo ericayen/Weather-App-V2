@@ -93,6 +93,8 @@ searchLocation.addEventListener("click", citySearch);
 function showFahrenheit(event) {
   event.preventDefault();
   let temperature = document.querySelector("#deg-temp");
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemp);
 }
@@ -100,6 +102,8 @@ function showFahrenheit(event) {
 function showCelcius(event) {
   event.preventDefault();
   let temperature = document.querySelector("#deg-temp");
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   temperature.innerHTML = Math.round(celciusTemp);
 }
 
