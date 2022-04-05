@@ -30,24 +30,24 @@ buttonClick.addEventListener("click", replaceText);
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  /*  let high = Math.round(response.data.main.temp_max);
-  let low = Math.round(response.data.main.temp_min); */
+  let high = Math.round(response.data.main.temp_max);
+  let low = Math.round(response.data.main.temp_min);
   let cityName = response.data.name;
   let windSpeed = Math.round(response.data.wind.speed);
   let weatherDescription = response.data.weather[0].description;
   let currentTemp = document.querySelector("#deg-temp");
-  /* let highTemp = document.querySelector("#high-temp");
-  let lowTemp = document.querySelector("#low-temp"); */
+  let highTemp = document.querySelector("#high-temp");
+  let lowTemp = document.querySelector("#low-temp");
   let city = document.querySelector("#city");
   let wind = document.querySelector("#speed");
   let weather = document.querySelector(".weather-description");
   let icon = document.querySelector(".weather-emoji");
   celciusTemp = response.data.main.temp;
   currentTemp.innerHTML = `${temperature}`;
-  /* highTemp.innerHTML = `${high}°`;
-  lowTemp.innerHTML = `${low}°`; */
+  highTemp.innerHTML = `${high}°  `;
+  lowTemp.innerHTML = `${low}°`;
   city.innerHTML = `${cityName}`;
-  wind.innerHTML = `${windSpeed}`;
+  wind.innerHTML = `Wind speed: ${windSpeed}km/h`;
   weather.innerHTML = `${weatherDescription}`;
   icon.setAttribute(
     "src",

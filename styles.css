@@ -93,6 +93,10 @@ h1 {
   color: rgb(77, 73, 73);
 }
 
+#low-temp {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .padding-0 {
   padding-right: 0;
   padding-left: 0;
